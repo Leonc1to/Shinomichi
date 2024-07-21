@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Cumpleaños, mi amor!</title>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes floatIn {
+            0% {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes catsAnimation {
+            0% {
+                opacity: 1;
+                transform: translateY(100vh) scale(0);
+            }
+            50% {
+                opacity: 1;
+                transform: translateY(50vh) scale(1.2);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(0) scale(0);
+            }
+        }
+
+        body {
+            background: linear-gradient(to right, #ffc1cc, #ffe4e6);
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 50px;
+            animation: fadeIn 2s ease-in;
+        }
+        h1 {
+            color: #ff69b4;
+            font-size: 3em;
+            animation: floatIn 2s ease-in-out;
+        }
+        p {
+            color: #ff1493;
+            font-size: 1.5em;
+            animation: floatIn 2s ease-in-out 0.5s;
+            animation-fill-mode: backwards;
+        }
+        .birthday-message {
+            margin: 20px auto;
+            padding: 20px;
+            border: 2px solid #ff69b4;
+            border-radius: 10px;
+            background-color: #fff0f5;
+            width: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: floatIn 2s ease-in-out 1s;
+            animation-fill-mode: backwards;
+        }
+        .birthday-image {
+            width: 300px;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 10px;
+            animation: floatIn 2s ease-in-out 1.5s;
+            animation-fill-mode: backwards;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            font-size: 1em;
+            color: white;
+            background-color: #ff69b4;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            animation: floatIn 2s ease-in-out 2s;
+            animation-fill-mode: backwards;
+            text-decoration: none;
+        }
+        .button:hover {
+            background-color: #ff1493;
+        }
+        .cat {
+            position: absolute;
+            font-size: 2em;
+            opacity: 0;
+            pointer-events: none;
+        }
+        .cat-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 9999;
+        }
+    </style>
+</head>
+<body>
+    <h1>¡Feliz Cumpleaños, Rin!</h1>
+    <div class="birthday-message">
+        <p>Querida Rin,</p>
+        <p>En este día tan especial, quiero desearte todo lo mejor. Que tu vida esté lleno de alegría, amor y momentos inolvidables.</p>
+        <p>¡Eres increíble y te quiero muchísimo!</p>
+    </div>
+    <img src="https://www.tiendanimal.es/articulos/wp-content/uploads/2023/11/gato-cumpleanos-fiesta-ideas-1200x900.jpg" alt="Imagen de cumpleaños" class="birthday-image">
+    <br>
+    <a href="Pagina2.html" class="button">Siguiente</a>
+    <a href="#" class="button" id="catsButton">¡Dame amor!</a>
+    <div id="catsContainer" class="cat-animation"></div>
+
+    <script>
+        document.getElementById('catsButton').addEventListener('click', () => {
+            const container = document.getElementById('catsContainer');
+            for (let i = 0; i < 10; i++) {
+                const cat = document.createElement('div');
+                cat.classList.add('cat');
+                cat.textContent = '🐱'; // Emoji de gatito
+                cat.style.top = `${Math.random() * 100}vh`;
+                cat.style.left = `${Math.random() * 100}vw`;
+                container.appendChild(cat);
+                cat.style.animation = `catsAnimation 2s ease-out forwards`;
+                cat.addEventListener('animationend', () => {
+                    cat.remove();
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+  

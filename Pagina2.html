@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Sentimientos por Ti</title>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes floatIn {
+            0% {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        body {
+            background: linear-gradient(to left, #ffc1cc, #ffe4e6);
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 50px;
+            animation: fadeIn 2s ease-in;
+        }
+        h1 {
+            color: #ff69b4;
+            font-size: 3em;
+            animation: floatIn 2s ease-in-out;
+        }
+        p {
+            color: #ff1493;
+            font-size: 1.5em;
+            animation: floatIn 2s ease-in-out 0.5s;
+            animation-fill-mode: backwards;
+        }
+        .message {
+            margin: 20px auto;
+            padding: 20px;
+            border: 2px solid #ff69b4;
+            border-radius: 10px;
+            background-color: #fff0f5;
+            width: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: floatIn 2s ease-in-out 1s;
+            animation-fill-mode: backwards;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            font-size: 1em;
+            color: white;
+            background-color: #ff69b4;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            animation: floatIn 2s ease-in-out 1.5s;
+            animation-fill-mode: backwards;
+            text-decoration: none;
+        }
+        .button:hover {
+            background-color: #ff1493;
+        }
+        .button-group {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>El amor de mis sueños</h1>
+    <div class="message">
+        <p>Desde el momento en que te conocí, supe que mi vida cambiaría para siempre.</p>
+        <p>Tu compañia ilumina mis días, y tu amor llena mi corazón de una manera que nunca imaginé.</p>
+        <p>En este día tan especial, quiero que sepas cuánto te amo y cuánto significas para mí.</p>
+        <p>Eres única en este mundo y eso me hace amarte demasiado.</p>
+        <p>¡Eres mi todo y estoy agradecido por cada momento que compartimos juntos!</p>
+        <p>Feliz cumpleaños, mi amor.</p>
+        <p>Con todo mi corazón,</p>
+        <p>Leonchito</p>
+    </div>
+    <div class="button-group">
+        <a href="index.html" class="button">Volver</a>
+        <a href="https://youtu.be/J---aiyznGQ" target="_blank" class="button">Ver Video</a>
+    </div>
+</body>
+</html>
